@@ -1,0 +1,97 @@
+<div class="container mt-5">
+  <h3 class="mb-3">
+    Viewing Employee with ID : <i>{{ employee.id }}</i>
+  </h3>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="updateEmployee()">
+        <div class="mb-3">
+          <label for="id">ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            placeholder=" Employee ID"
+            [(ngModel)]="employee.id"
+            name="id"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder=" Employee Name"
+            [(ngModel)]="employee.name"
+            name="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="emailId">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="emailId"
+            placeholder="Enter Employee Email"
+            [(ngModel)]="employee.email"
+            name="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="department">Department</label>
+          <select
+            name="department"
+            id="department"
+            class="form-control"
+            [(ngModel)]="employee.department"
+          >
+            <option value="MERN Developer">MERN Developer</option>
+            <option value="MEAN Developer">MEAN Developer</option>
+            <option value="React Developer">React Developer</option>
+            <option value="SQL Developer">SQL Developer</option>
+            <option value="Cloud Architect">Cloud Architect</option>
+            <option value="HR Admin">HR Admin</option>
+            <option value="Quality Analyst">Quality Analyst</option>
+            <option value="Manual Tester">Manual Tester</option>
+            <option value="Automation Tester">Automation Tester</option>
+            <option value="Scrum Master">Scrum Master</option>
+            <option value="IT Manager">IT Manager</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="phone">Phone</label>
+          <input
+            type="number"
+            class="form-control"
+            id="phone"
+            placeholder="Enter Employee Phone"
+            [(ngModel)]="employee.phone"
+            name="phone"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="salary">Salary</label>
+          <input
+            type="number"
+            class="form-control"
+            id="salary"
+            placeholder="Enter Employee Name"
+            [(ngModel)]="employee.salary"
+            name="salary"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteEmployee(employee.id)"
+        >
+          Delete
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

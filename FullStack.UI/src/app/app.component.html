@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink=""
+      >FullStack <span class="subHead">Angular+DotNet</span></a
+    >
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="employees"
+          routerLinkActive="clicked homeLink"
+          >Employees</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="employee/add"
+          routerLinkActive="clicked homeLink"
+          >Add New Employees</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,14 @@
+.clicked {
+  background-color: lightblue;
+  color: darkcyan;
+}
+
+.homeLink {
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.subHead {
+  font-size: 0.9rem;
+}

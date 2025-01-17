@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <h1 class="mb-3">Add New Employee</h1>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="addEmployee()">
+        <div class="mb-3">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter Employee Name"
+            [(ngModel)]="addEmployeeRequest.name" name="name" />
+        </div>
+        <div class="mb-3">
+          <label for="emailId">Email</label>
+          <input type="email" class="form-control" id="emailId" placeholder="Enter Employee Email"
+            [(ngModel)]="addEmployeeRequest.email" name="email" />
+
+        </div>
+        <div class="mb-3">
+          <label for="department">Department</label>
+          <select name="department" id="department" class="form-control" [(ngModel)]="addEmployeeRequest.department">
+            <option value="MERN Developer">MERN Developer</option>
+            <option value="MEAN Developer">MEAN Developer</option>
+            <option value="React Developer">React Developer</option>
+            <option value="SQL Developer">SQL Developer</option>
+            <option value="Cloud Architect">Cloud Architect</option>
+            <option value="HR Admin">HR Admin</option>
+            <option value="Quality Analyst">Quality Analyst</option>
+            <option value="Manual Tester">Manual Tester</option>
+            <option value="Automation Tester">Automation Tester</option>
+            <option value="Scrum Master">Scrum Master</option>
+            <option value="IT Manager">IT Manager</option>
+          </select>
+
+        </div>
+        <div class="mb-3">
+          <label for="phone">Phone</label>
+          <input type="number" class="form-control" id="phone" placeholder="Enter Employee Phone"
+            [(ngModel)]="addEmployeeRequest.phone" name="phone" />
+
+        </div>
+        <div class="mb-3">
+          <label for="salary">Salary</label>
+          <input type="number" class="form-control" id="salary" placeholder="Enter Employee Name"
+            [(ngModel)]="addEmployeeRequest.salary" name="salary" />
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
